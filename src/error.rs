@@ -132,6 +132,11 @@ impl From<core::array::TryFromSliceError> for Unspecified {
 pub struct KeyRejected(&'static str);
 
 impl KeyRejected {
+    /// The value returned from <Self as std::error::Error>::description()
+    pub fn description_(&self) -> &'static str {
+        self.0
+    }
+
     pub(crate) fn inconsistent_components() -> Self {
         Self("InconsistentComponents")
     }
