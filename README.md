@@ -13,6 +13,13 @@ There are two branches of note:
  - `main-ppc` for the somewhat-upstream version
  - `ppc-0.16.20` for the current latest version published to crates.io
 
+NOTE: The `ppc-0.16.20` branch originally included commits meant for a future
+release, and caused compilation errors with certain projects. The branch has
+been revised to be actually based off of `0.16`. You may need to force a clean
+rebuild to fetch the new branch, due to the git history rewrite. The old
+branch is still available at `ppc-0.16.20-old`, in the event the new version
+does not work.
+
 
 Original README:
 ----
